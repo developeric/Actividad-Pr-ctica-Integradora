@@ -1,9 +1,9 @@
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 
 export default function Login() {
-    const { register, handleSubmit } = useForm();
+    // const { register, handleSubmit } = useForm();
 
     return (
         <div className="min-h-screen w-full bg-[#132A46] flex flex-col items-center justify-center relative text-white font-sans">
@@ -12,7 +12,7 @@ export default function Login() {
                     Bienvenido de vuelta
                 </h1>
 
-                <form className="flex w-full max-w-md flex-col" onSubmit={handleSubmit(Login)}>
+                <form className="flex w-full max-w-md flex-col">
                     <div className="mb-6">
                         <label className="mb-2 block text-base font-bold" htmlFor="email">
                             Correo electrónico
@@ -23,7 +23,7 @@ export default function Login() {
                             placeholder="Ingresa tu correo electrónico"
                             autoComplete="email"
                             className="h-11 w-full rounded-md border border-white/30 bg-white px-4 text-base text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#2084b6]"
-                            {...register("email", { required: true })}
+                            // {...register("email", { required: true })}
                         />
                     </div>
 
@@ -37,7 +37,7 @@ export default function Login() {
                             placeholder="Ingresa tu contraseña"
                             autoComplete="current-password"
                             className="h-11 w-full rounded-md border border-white/30 bg-white px-4 text-base text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#2084b6]"
-                            {...register("password", { required: true })}
+                            // {...register("password", { required: true })}
                         />
                     </div>
 

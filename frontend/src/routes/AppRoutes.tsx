@@ -1,18 +1,16 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Login from "../pages/auth/Login.js";
-import Register from "../pages/auth/Register.js";
-import Home from "../pages/home/Home.js";
+import Login from "../pages/LoginPage.js";
+import Register from "../pages/RegisterPage.js";
 
 export default function AppRoutes() {
     return (
         <>
             <Routes>
                 {/*NO LOGUEADOS */}
-                <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 {/* RUTA COMODÍN */}
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="*" element={<Navigate to="/login" replace />} />
             </Routes>
         </>
     );
